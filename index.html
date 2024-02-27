@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    <nav> 
+   <nav> 
         <a href="#start">Akash Badadani</a> 
         <a href="https://drive.google.com/drive/folders/1nP2U-eV-LjBP6Dv0HRc4d2N8Lfi3zWS0" class="o-desktop">Resume</a>
         <div class="c-nav-social o-desktop"> <a href="#">Socials</a>
@@ -56,15 +56,17 @@
             </div>
         </div>
         <a id="music-toggle" href="#"><i id="music-icon" class="fa fa-music"></i></a>
-        <audio id="background-music" src="music.mp3" autoplay></audio>
+        <audio id="background-music" src="music.mp3" loop autoplay></audio>
         <a data-router-disabled="" href="mailto:akashsgbadadani@gmail.com">Contact</a>
     </nav>
 
     <script>
+        // Get references to the music toggle icon and the audio element
         const musicToggle = document.getElementById('music-toggle');
         const musicIcon = document.getElementById('music-icon');
         const backgroundMusic = document.getElementById('background-music');
       
+        // Function to toggle music play/pause and icon
         function toggleMusic() {
           if (backgroundMusic.paused) {
             backgroundMusic.play();
@@ -77,6 +79,7 @@
           }
         }
       
+        // Add click event listener to the music toggle
         musicToggle.addEventListener('click', toggleMusic);
       </script>
     
