@@ -32,27 +32,54 @@
     <link rel="stylesheet" href="css/index.24a51c92.css">
     <link rel="stylesheet" href="css/index.2b8c6830.css">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <nav> <a href="#start">Akash Badadani</a> <a href="https://drive.google.com/drive/folders/1nP2U-eV-LjBP6Dv0HRc4d2N8Lfi3zWS0" class="o-desktop">Resume</a>
+    <nav> 
+        <a href="#start">Akash Badadani</a> 
+        <a href="https://drive.google.com/drive/folders/1nP2U-eV-LjBP6Dv0HRc4d2N8Lfi3zWS0" class="o-desktop">Resume</a>
         <div class="c-nav-social o-desktop"> <a href="#">Socials</a>
             <div class="c-nav-social__dropdown">
                 <ul>
-                    <li style="--order:4"><a data-router-disabled=""
-                            href="https://www.linkedin.com/in/akash-badadani-42241322b">LinkedIn</a></li>
                     <li style="--order:1"><a data-router-disabled=""
-                            href="https://www.youtube.com/@akash_badadani">YouTube</a></li>
+                            href="https://www.linkedin.com/in/akash-badadani-42241322b">LinkedIn</a></li>
                     <li style="--order:2"><a data-router-disabled=""
+                            href="https://www.youtube.com/@akash_badadani">YouTube</a></li>
+                    <li style="--order:3"><a data-router-disabled=""
                             href="https://www.instagram.com/akash.badadani">Instagram</a></li>
-                    <li style="--order:3"><a data-router-disabled=""
+                    <li style="--order:4"><a data-router-disabled=""
                             href="https://github.com/akashb2003">GitHub</a></li>
-                    <li style="--order:3"><a data-router-disabled=""
+                    <li style="--order:5"><a data-router-disabled=""
                             href="https://twitter.com/Akash_badadani">Twitter</a></li>
                 </ul>
             </div>
-        </div> <a data-router-disabled="" href="mailto:akashsgbadadani@gmail.com">Contact</a>
+        </div>
+        <a id="music-toggle" href="#"><i id="music-icon" class="fa-volume-up"></i></a>
+        <audio id="background-music" src="ACDC  Back In Black.mp3" loop autoplay></audio>
+        <a data-router-disabled="" href="mailto:akashsgbadadani@gmail.com">Contact</a>
     </nav>
+
+    <script>
+        const musicToggle = document.getElementById('music-toggle');
+        const musicIcon = document.getElementById('music-icon');
+        const backgroundMusic = document.getElementById('background-music');
+      
+        function toggleMusic() {
+          if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            musicIcon.classList.remove('fa-volume-off');
+            musicIcon.classList.add('fa-volume-up');
+          } else {
+            backgroundMusic.pause();
+            musicIcon.classList.remove('fa-volume-up');
+            musicIcon.classList.add('fa-volume-off');
+          }
+        }
+      
+        musicToggle.addEventListener('click', toggleMusic);
+      </script>
+    
     <div class="c-loader is-loading">
         <p class="js-split">Portfolio<br><span class="js-year">©2024</span></p>
         <div class="c-loader__bg"></div>
